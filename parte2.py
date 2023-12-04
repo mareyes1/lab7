@@ -34,7 +34,7 @@ def monitorear_proceso(nombre_proceso, comando):
 
 if __name__ == "__main__":
     if len(sys.argv) != 3:
-        print("Uso: python script.py <nombre_proceso> <comando>")
+        print("Uso: python3 parte2.py <nombre del proceso> <comando>")
         sys.exit(1)
 
     nombre_proceso = sys.argv[1]
