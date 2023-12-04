@@ -21,6 +21,27 @@ Archivo `parte2.py`: En el script se utiliza un bucle infinito para monitorear c
 
 Se verifica si el proceso está en ejecución comparando el ID del proceso con la lista de procesos activos. Si se detecta que el proceso se ha cerrado, se utiliza `subprocess.Popen` para reiniciarlo. Se deja un tiempo de espera de 5 segundos para las verificaciones de estado periódicas.
 
+Se debe ejecutar de la siguiente forma:
+
+`>>> python3 ./parte2.py <nombre del proceso> <comando para ejecutarlo>`
+
 A continuación se muestra como se visualiza en la terminal la ejecución del script, donde se vuelve a abrir el proceso y finalmente se detiene el monitoreo al interrumpir la ejecución del script.
 
 ![resultados2](https://raw.githubusercontent.com/mareyes1/Lab2/main/parte2_lab7.png)
+
+## 3 Log de consumo y gráfica de uso de recursos
+Archivo `parte3.py`: El script ejecuta un proceso especificado y periódicamente lee y registra el consumo de CPU y de memoria en un archivo, almacenando la información con timestamps.
+
+Se utiliza la biblioteca `matplotlib` para graficar los resultados.
+
+En este punto es importante reconocer que para una aplicación y utilidad más reales de este script, incluso para la misma prueba a nivel didáctico de este laboratorio, hubiese sido más interesante hacer mayores pruebas con otro tipo de procesos que tuviesen un comportamiento más dinámico e idealmente de relevancia real. También es cierto que la configuración de la gráfica, en conjunto con la elección adecuada del proceso a monitorear, permitirían un mayor aprovechamiento del ejercicio de scripting. No obstante, se presentan los resultados de probar el script con un proceso cualquiera, como se muestra a continuación.
+
+![resultados3](https://raw.githubusercontent.com/mareyes1/Lab2/main/parte3_lab7.png)
+
+Se muestra como se logra graficar con `matplotlib` la información del proceso, aunque como se mencionó anteriormente, el ejemplo utilizado no es el más apropiado.
+
+Los resultados mostrados surgen de ejecutar el siguiente comando, donde el segundo argumento corresponde al tiempo de espera:
+
+`>>> python3 ./parte3.py calc.exe 5`
+
+Nota: Como se ha podido ver, en gran parte se ha hecho uso de la plataforma Windows, la cual aunque es más incómoda para trabajar en comparación la terminal de Linux, era la única que estaba disponible debido al agotamiento de la memoria de almacenamiento de la máquina virtual de Linux que se venía utilizando. Sin embargo en el caso de los primeros scripts sí fue posible verificar su funcionamiento y portabilidad en ambas plataformas.
