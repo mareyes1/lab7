@@ -86,7 +86,7 @@ def graficar_datos(log_file):
 
 if __name__ == "__main__":
     if len(os.sys.argv) != 3:
-        print("Uso: python script.py <binario_a_ejecutar> <intervalo_de_monitoreo>")
+        print("Uso: python parte3.py <binario a ejecutar> <intervalo de monitoreo>")
         os.sys.exit(1)
 
     binario = os.sys.argv[1]
